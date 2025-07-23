@@ -1,22 +1,53 @@
 \documentclass[10pt,twocolumn]{article} 
 \usepackage{simpleConference}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsfonts,amssymb,graphicx}
+\usepackage{subfigure}   % 使用子图形
+\usepackage{indentfirst} % 中文段落首行缩进
+\usepackage{bm}          % 公式中的粗体字符(用命令\boldsymbol）
+\usepackage{indentfirst} % 中文首段缩进
+\usepackage{abstract}    % 2栏文档，一栏摘要及关键字宏包
+\usepackage{amsthm}      % 使用定理
+\usepackage{booktabs}    % 使用表格
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{titlesec}
 \usepackage{times}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{ccaption}
+\usepackage{float}
+\usepackage{calc}
+\usetikzlibrary{calc}
+\usetikzlibrary{circuits.ee.IEC}
+% 在导言区添加 circuitikz 包
+\usepackage{circuitikz}
+\usepackage{environ}
+\usepackage{lmodern}
+\usepackage{anyfontsize}
+\usepackage{hyperref}
+\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{url,hyperref}
 
 \begin{document}
 
-\title{\LaTeX\ Template for a Simple, Two-Column Paper}
+\title{Search for Simultaneous Production of Double $J/\psi$ and $\Upsilon$ Mesons,\\Double $J/\psi$ and $\phi$ Mesons, or $J/\psi$, $\Upsilon$ and $\phi$ Mesons in Proton-Proton\\ Collisions at $\sqrt{s} = 13.6 ~ \mathrm{TeV}$ at the CMS Experiment}
 
-\author{Iroro Orife \\
+\author{Chi Wang \\
 \\
-Technical Report \\
-Seattle, Washington, USA \\
+Topics on Frontiers of Cross-Sciences Course Report \\
+Zhili College, Tsinghua University, China \\
 \today
 \\
 \\
-iroro@alumni.cmu.edu  \\
+chi.w@cern.ch  \\
 }
 
 \maketitle
@@ -30,8 +61,61 @@ For the abstract state the problem, your approach and solution, and the main con
 
 
 \section{Introduction}
-The Introduction is crucially important. By the time a referee has finished the Introduction, he's probably made an initial decision about whether to accept or reject the paper. He'll read the rest of the paper looking for evidence to support his decision. A casual reader will continue on if the Introduction captivated him, and will set the paper aside otherwise. 
-Here is the Stanford InfoLab's patented five-point structure for Introductions. Unless there's a good argument against it, the Introduction should consist of five paragraphs answering the following five questions:
+
+Proton consists of three quarks, two up-type and one down-type, and gluons, which hold together the three valence quarks, as well as of a ‘sea’ of virtual quark–antiquark pairs. All these components are referred to as ‘partons’, with point-like behaviour in deep inelastic scatterings.\cite{}
+
+In the standard picture of proton–proton (pp) collisions, typically only a few partons undergo a hard scattering with one another, with the remainders of each proton only slightly disturbed in the process. As the collision energy increases, the densities of gluons and sea quarks probed inside each proton grow rapidly. Thus, at higher collision energies, it becomes more likely for more than one pair of partons undergo a hard scattering in a single pp collision, leading to the simultaneous and independent production of two or more particles with transverse momentum ($p_T$) and/or mass ($m$) above a few giga-electronvolts. Such processes are collectively referred to as multi-parton scattering (MPS).
+
+MPS processes offer an important probe into the complicated inner structure of the proton and its evolution with energy.\cite{5Diehl_JHEP}\cite{6Blok_EPJC} Many of these features, for example, the parton density profile in the plane transverse to the colliding beams, as well as the various correlations (in position, momentum, flavour, colour, spin and so on) between individual partons, are very difficult to calculate theoretically, since , and can only be mapped out through experimental studies of MPS in different systems and for different numbers $n$ of simultaneous scatterings \cite{3MPI_LHC}.
+
+Under the most simple assumption that the individual sub-scatterings are independent, one may consider the probability for the multiple production of particles with a high transverse momentum proportional to the product of the probabilities for each individual scattering. This relation is more commonly expressed in terms of cross sections as the "pocket formula" shown below:
+
+\begin{equation}
+\begin{aligned}
+    \label{eqn:nps_pocket}
+    &\sigma^{pp\rightarrow\psi_1+\psi_2+\cdots+\psi_n+X}_{\text{NPS}} \\&=
+    \left(\frac {\mathfrak{m}}{n!}\right) \frac{\sigma_{\text{SPS}}^{pp\rightarrow \psi_1+X}\sigma_{\text{SPS}}^{pp\rightarrow \psi_2+X}\cdots\sigma_{\text{SPS}}^{pp\rightarrow \psi_n+X}}{(\sigma_{\text{eff,NPS}})^{n-1}}
+\end{aligned}
+\end{equation}
+
+where the effective cross section $\sigma_{\text{eff,NPS}}$ is only determined by the transverse parton density overlap, and the combinatorial factor $\mathfrak{m}$ is used to remove the duplicate counting from same-type particle final states.
+
+Double parton scattering (DPS) processes are the most trivial MPS processes and the first observed. The first observation of DPS processes was made by the AFS collaboration on the Intersecting Storage Ring (ISR) at CERN\cite{ISR_DPS}. Since then, a variety of DPS processes have been studied on high-energy hadron colliders such as the Tevatron and the Large Hadron Collider (LHC).
+
+In DPS processes, the "pocket formula" (\ref{eqn:nps_pocket}) can be more explicitly written as
+
+\begin{equation}
+\begin{aligned}
+    \label{eqn:dps_pocket}
+    \sigma^{pp\rightarrow\psi_1+\psi_2+X}_{\text{DPS}}=
+    \left(\frac {\mathfrak{m}}{2!}\right) \frac{\sigma_{\text{SPS}}^{pp\rightarrow \psi_1+X}\sigma_{\text{SPS}}^{pp\rightarrow \psi_2+X}}{\sigma_{\text{eff,DPS}}}
+\end{aligned}
+\end{equation}
+
+\ref{}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{}
+    \caption{Summary of current $\sigma_{\text{eff,DPS}}$ measurement results in various final states}
+    \label{fig:sigma-eff-dps-summary}
+\end{figure}
+
+Triple parton scattering processes offer an independent probe into the fascinating properties of the quark dynamics inside protons. 
+
+\section{The Large Hadron Collider (LHC)}
+
+\section{The CMS Experiment}
+
+\section{Event Selection and Datasets}
+
+\section{Signal Extraction}
+
+\section{Monte-Carlo (MC) Simulation Studies}
+
+\section{Conclusions}
+
+
 
 \begin{description}
   \item[$\bullet$]  What is the problem?
@@ -158,6 +242,15 @@ installing Cygwin and using its bash shell.
   \label{fig-label}
 \end{figure}
 
+\begin{figure*}[!b]
+  \begin{center}
+    \includegraphics[width=3.5in]{figure.pdf}
+  \end{center}
+
+  \caption{\small Figure caption. To get a figure to span two
+      columns, use the environment figure* rather than figure.}
+  \label{fig-label}
+\end{figure*}
 
 Suppose you wish to include a figure, like that in figure \ref{fig-label}.
 The simplest mechanism is to install Adobe Acrobat, which includes
