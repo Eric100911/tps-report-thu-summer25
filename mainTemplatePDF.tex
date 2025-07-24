@@ -11,6 +11,7 @@
 \usepackage{booktabs}    % 使用表格
 \usepackage{siunitx}
 \usepackage{tikz}
+\usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{times}
 \usepackage{wasysym}
@@ -34,10 +35,16 @@
 \usepackage{makecell}
 \usepackage{graphicx}
 \usepackage{amssymb}
+\usepackage{ragged2e}
 \usepackage{url,hyperref}
 
 \newcommand*{\effXsecDPS}{\sigma_{\text{eff,DPS}}}
 \newcommand*{\effXsecTPS}{\sigma_{\text{eff,TPS}}}
+\newcommand*{\GeV}{~\text{GeV}}
+\newcommand*{\GeVc}{~\text{GeV/c}}
+\newcommand*{\GeVcs}{~\text{GeV/c}^2}
+
+\renewcommand{\arraystretch}{1.2}
 
 \begin{document}
 
@@ -103,7 +110,7 @@ In DPS processes, the "pocket formula" (eqn. \ref{eqn:nps_pocket}) can be more s
 
 From the proton forms adopted by event generators like Pythia8 and Herwig++, it is expected that the $\sigma_\text{eff,DPS}$ would fall in the range of $20 \to 30~\mathrm{mb}$ and would not depend on the final state studies. However, as summarized in figure \ref{fig:sigma-eff-dps-summary}, $\sigma_\text{eff,DPS}$ results obtained from experiments have been much lower, with $\sigma_\text{eff,DPS}\approx 10-20~\text{mb}$ from final states containing jets and/or electroweak bosons\cite{ATLAS_4JET_7TEV}\cite{ATLAS_WJetJet_7TEV}\cite{ATLAS_Z_JPSI}\cite{CDF_4JET}\cite{CMS_4JET_13TEV}\cite{CMS_WJETJET_7TEV}\cite{CMS_WW_DPS_8TEV_LIM}\cite{CMS_WW_DPS_13TEV_FOUND}, and even lower values of $\sigma_\text{eff,DPS}\approx 3-10~\text{mb}$ extracted from processes where two heavy quarkonia like $J/\psi$ and $\Upsilon$ are produced\cite{ATLAS_JPSIJPSI_8TEV}\cite{ATLAS_JPSI_PSI2S_7_8_TEV_COMBINED}\cite{CMS_INCL_JPSIJPSI_7TEV}\cite{ CMS_JPSIPSI2S_7TEV}\cite{CMS_JPSIPSI2S_DIFF_7TEV}\cite{CMS_YY_8TEV}\cite{CMS_YY_XSEC}.
 
-\begin{figure}[H]
+\begin{figure}
     \centering
     \includegraphics[width=1.0\linewidth]{images/sigma_eff_DPS_summary.png}
     \caption{Summary of current $\effXsecDPS$ measurement results in various final states\cite{CMS_TRI_JPSI}}
@@ -121,7 +128,7 @@ TPS processes in high-energy proton-proton collisions has drawn much attention b
     \effXsecTPS = \kappa \effXsecDPS \quad (\kappa = 0.82 \pm 0.11)
 \end{equation}
 
-A more specific study on TPS processes was conducted by H.-S. Shao and Y.-J. Zhang in 2019\cite{YJZ_TRI_JPSI}, in which they demonstrated the feasibility of using existing data to observe triple-$J/\psi$ hadroproduction and, using this process, to probe into TPS processes. A further work by Y.-J. Zhang demonstrated the feasibility of observing simultaneous production of $J/\psi$, $\Upsilon$ and a $\phi$ meson with $p_T > 2~\text{GeV/c}$ in high-energy proton-proton collisions\cite{YJZ_MPS_REPORT}.
+A more specific study on TPS processes was conducted by H.-S. Shao and Y.-J. Zhang in 2019\cite{YJZ_TRI_JPSI}, in which they demonstrated the feasibility of using existing data to observe triple-$J/\psi$ hadroproduction and, using this process, to probe into TPS processes. A further work by Y.-J. Zhang demonstrated the feasibility of observing simultaneous production of $J/\psi$, $\Upsilon$ and a $\phi$ meson with $p_T > 2\GeVc$ in high-energy proton-proton collisions\cite{YJZ_MPS_REPORT}.
 
 The triple-$J/\psi$ production in proton-proton collision was soon observed at the CMS experiment, with a DPS effective cross-section of $\effXsecDPS = 2.7^{+1.4}_{-1.0}(\text{exp})^{+1.5}_{-1.0}(\text{theo}) ~\text{mb}$, compatible with previous $\effXsecDPS$ results from di-quarkonia processes. 
 
@@ -129,9 +136,13 @@ Following the pioneering studies in TPS at the CMS experiment, we are motivated 
 
 \subsection{The Large Hadron Collider (LHC)}
 
-The Large Hadron Collider (LHC) operated by the European Organization of Nuclear Research (CERN) is the most powerful accelerator on earth today. The LHC is able to collide beams of protons with an energy of up to 6.8 TeV, corresponding to a center-of-mass energies of up to $\sqrt{s}=13.6~\mathrm{TeV}$. Located approximately 100 meters underground across the Swiss-Franco border near Geneva , the LHC has a main storage ring with a circumference of approximately 27 kilometers, capable of accelerating more than 2800 proton bunches simultaneously, each bunch containing approximately $10^11$ protons. Protons accelerated in the LHC traverse through the storage ring in opposite directions and intersect at four interaction points to collide at a time interval of 25 nanoseconds and deliver an instantaneous luminosity of [] $2.5\times 10^{34} ~\text{cm}^{-2}\cdot\text{s}^{-1}$. 
+The Large Hadron Collider (LHC) operated by the European Organization of Nuclear Research (CERN) is the most powerful accelerator on earth today. The LHC is able to collide beams of protons with an energy of up to 6.8 TeV, corresponding to a center-of-mass energies of up to $\sqrt{s}=13.6~\mathrm{TeV}$. Located approximately 100 meters underground across the Swiss-Franco border near Geneva , the LHC has a main storage ring with a circumference of approximately 27 kilometers, capable of accelerating more than 2800 proton bunches simultaneously, each bunch containing approximately $10^11$ protons. Protons accelerated in the LHC traverse through the storage ring in opposite directions and intersect at four interaction points to collide at a time interval of 25 nanoseconds and deliver an instantaneous luminosity up to $2.5\times 10^{34} ~\text{cm}^{-2}\cdot\text{s}^{-1}$\cite{CMS:LUMI-PUB}. 
 
 Particle detectors located at these interaction points, namely CMS, ATLAS, ALICE and LHCb, measure the key properties of particles produced in collision with their unique detector modules, and acquire such data for further physics analysis.
+
+One important effect from the increasing luminosity is the "pileup" effect which refers to the phenomenon that in each bunch crossing there are usually more than one hard scattering event.\cite{CMS:LUMI-PUB} In LHC Run 3, the average number of interactions in each bunch crossing reaches 60, as shown by Figure \ref{fig:CMS_PU_Run_3}. Such effect may introduce a higher combinatorial background in the analysis and require advanced analysis techniques to mitigate its effect.
+
+
 
 \subsection{The CMS Detector}
 
@@ -152,11 +163,94 @@ Another distinctive advantage of CMS is its muon measurement capability, owing t
 
 \subsection{Dataset}
 
-In the present analysis, the dataset employed is the `ParkingDoubleMuonLowMass` collected from 2022 to 2024, all during the LHC Run 3 period, corresponding to a center-of-mass energy of $\sqrt{s} = 13.6 ~\text{TeV}$ and an integrated luminosity of $\mathcal{L}\approx176.6~\text{fb}^{-1}$.
+In the present analysis, the dataset employed is the ParkingDoubleMuonLowMass collected from 2022 to 2024 certified as "muon" physics datasets, all during the LHC Run 3 period, corresponding to a center-of-mass energy of $\sqrt{s} = 13.6 ~\text{TeV}$ and an integrated luminosity of $\mathcal{L}\approx176.6~\text{fb}^{-1}$\cite{CMS:LUM-22-001}\cite{CMS:DP-LUMI-2023}\cite{CMS:LUMI-PUB}.
 
-\subsection{Triggering Condition}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{images/CMS_int_lumi_Run3.png}
+%     \caption{Cumulative luminosity delivered to CMS versus date during  LHC Run 3 \cite{CMS:LUMI-PUB}}
+%     \label{fig:CMS_int_lumi}
+% \end{figure}
 
-The collision 
+\begin{table*}[h!]
+    \centering
+    \caption{Datasets and corresponding JSON files analyzed\\}
+    \label{tab:dataset}
+    \begin{tabular}{c}
+    \toprule
+     \multicolumn{1}{l}{\textbf{2022} - Cert\_Collisions2022\_355100\_362760\_Muon.json}\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022C-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022D-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022D-PromptReco-v2/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022E-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022F-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2022G-PromptReco-v1/MINIAOD\\
+     \midrule
+     \multicolumn{1}{l}{\textbf{2023} - Cert\_Collisions2023\_366442\_370790\_Muon.json}\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023C-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023C-PromptReco-v2/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023C-PromptReco-v3/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023C-PromptReco-v4/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023D-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2023D-PromptReco-v2/MINIAOD\\
+     \midrule
+     \multicolumn{1}{l}{\textbf{2024} - Cert\_Collisions2024\_378981\_386951\_Muon.json}\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024C-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024D-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024E-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024E-PromptReco-v2/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024F-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024G-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024H-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024I-PromptReco-v1/MINIAOD\\
+     ParkingDoubleMuonLowMass[0-7]/Run2024I-PromptReco-v2/MINIAOD\\
+     \bottomrule
+    \end{tabular}
+\end{table*}
+
+\subsection{Trigger Condition}
+
+LHC collisions occur at a rate of 40 MHz, which corresponds to a data production rate of around 40 TB/s, making it impossible to store all events. The CMS experiment therfore employs a a two-tiered trigger system to preserve only events of physical importance. A hardware-based Level 1 Trigger (L1T), run on FPGAs and ASICs, reduces the event rate to 100 kHz. A software-based High Level Trigger (HLT), run on computer farms further reduces the average output rate to around 1.5 kHz.
+
+The CMS datasets typically accept events passing any one of a certain set of trigger conditions. In our analysis, we require the events to be triggered by the HLT\_Dimuon0\_Jpsi3p5\_Muon2\_v or the HLT\_Trimuon5\_3p5\_2\_Upsilon\_Muon\_v, with the primary criteria of each trigger listed in Table \ref{tab:trigger}. The former trigger is used to extract potential $J/\psi\to\mu^+\mu^-$ processes and the latter one is used to obtain more $\Upsilon(nS)$-containing samples.
+
+\begin{table*}[ht]
+    \centering
+    \caption{Primary selection criteria of the triggers employed}
+    \begin{tabular}{p{0.45\textwidth}p{0.45\textwidth}}
+    \toprule
+    \textbf{HLT\_Dimuon0\_Jpsi3p5\_Muon2\_v}  &
+    \textbf{HLT\_Trimuon5\_3p5\_2\_Upsilon\_Muon\_v} \\
+    \midrule
+    At least 3 muons present and satisfying: &
+    At least 3 muons present and satisfying: \\
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item Transverse momentum $p_T > 2.0\GeVc$
+        \item Pseudorapidity $|\eta| < 2.5$
+    \end{itemize} &
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item Transverse momentum $p_T > 2.0\GeVc$
+        \item Pseudorapidity $|\eta| < 2.5$
+    \end{itemize}\\
+    & $\mathbf{\cdot}$ At least 1 muon satisfying $p_T > 5.0 \GeVc$ \\
+    \midrule
+    With at least one pair of muon satisfying : &
+    With at least one pair of muon satisfying : \\
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item $p_T > 3.5\GeVc$
+        \item Invariant mass $m_{\mu\mu}$ satisfying $2.95\GeVcs < m_{\mu\mu} < 3.25 \GeVcs$
+        \item Tracks fitted to a common vertex with probability > $0.5\%$
+    \end{itemize} &
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item $p_T > 3.5\GeVc$
+        \item Invariant mass $m_{\mu\mu}$ satisfying $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$
+        \item Tracks fitted to a common vertex with probability > $0.5\%$
+    \end{itemize} \\
+    \bottomrule
+    \end{tabular}
+
+    \label{tab:my_label}
+\end{table*}
 
 \subsection{Final State Particle Selection}
 
@@ -170,188 +264,67 @@ To reduce background components, a further set of selection (shown in Table \ref
 
 \begin{table}[H]
     \centering
-    \caption{Selection for final-state objects used in event reconstruction}
+    \caption{Selection for final-state objects analyzed}
     \begin{tabular}{cl}
     \toprule
     Particle & Selection Criteria \\
     \midrule
     $\mu^\pm$ & Muon ID "soft" \\
               & $|\eta| < 2.4$ \\
-              & $p_T > 3.5~\text{GeV/c}$ for $|\eta| < 1.2$ \\
-              & $p_T > 2.5~\text{GeV/c}$ for $1.2 < |\eta| < 2.4$ \\
+              & $p_T > 3.5\GeVc$ for $|\eta| < 1.2$ \\
+              & $p_T > 2.5\GeVc$ for $1.2 < |\eta| < 2.4$ \\
+              \midrule
     Charged Tracks & High Purity \\
               & $|\eta|<2.5$ \\
-              & $p_T > 2.0 ~\text{GeV/c}$ \\
+              & $p_T > 2.0 \GeVc$ \\
     \bottomrule
     \end{tabular}
     \label{tab:mu_K_cuts}
 \end{table}
 
-To achieve a balance between signal-to-noise ratio and event statistics, we apply further individual selection for each process in the final signal extraction.
+To achieve a balance higher signal-to-noise ratio and event statistics, we apply further individual selection for each process in the final signal extraction.
 
 \section{Signal Extraction}
+
+\subsection{$pp\to J/\psi+J/\psi+\phi+X$}
+
+In extracting $pp\to J/\psi+J/\psi+\phi+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiJpsiPhi} for the reconstructed candidate event, in which the pseudorapidity $y$ is defined by:
+
+\begin{equation}
+    y = \frac{1}{2} \ln \frac {E-p_z}{E+p_z}
+\end{equation}
+
+\begin{table}[]
+    \centering
+    \caption{Event selection for $pp\to J/\psi+J/\psi+\phi+X$ candidate events\\}
+    \begin{tabular}{c p{0.66\linewidth}}
+        \toprule
+        Object & Criteria \\
+        \midrule
+        $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
+                 & $p_T > 6.0\GeVc$ \\
+                 & $|y| < 2.5$ \\
+                 & Opposite-sign muon pairs fitted to common vertex with $> 1\%$ probability \\
+                 \midrule
+        $J/\psi+J/\psi$ & Two $J/\psi$ candidates fitted to a common vertex with $> 1\%$ probability \\
+        \midrule
+        $\phi$ & $0.99 \GeVcs < m_{KK} < 1.07 \GeVcs$ \\
+               & Opposite-sign non-muon charged tracks fitted to common vertex with $> 1\%$ probability \\
+               & $p_T > 4.0\GeVc$ \\
+               \midrule
+        $J/\psi+J/\psi+\phi$ & Three mesons fitted to a common vertex with "valid" result \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:cut_JpsiJpsiPhi}
+\end{table}
+
+A three-dimensional maximum likelihood fit is used to extract the signal components. The $J/\psi$ signal shape is modelled with the sum of a Crystal Ball function and a Gaussian function, with all parameters left to float and background modelled by an exponential function. The $\phi$ signal shape on the di-Kaon invariant mass spectrum is taken to be a Gaussian function, also with all parameters left free to float and its combinatorial background modelled by a 4th-order polynomial. With all signal and backround components, we define further eight yield parameters.
+
+The fit projection is shown in Figure 
 
 \section{Monte-Carlo (MC) Simulation Studies}
 
 \section{Conclusions}
-
-
-
-\begin{description}
-  \item[$\bullet$]  What is the problem?
-  \item[$\bullet$]  Why is it interesting and important?
-  \item[$\bullet$]  Why is it hard? Why do naive approaches fail?
-  \item[$\bullet$]  Why hasn't it been solved before? What's wrong with previous proposed solutions? How does mine differ?
-  \item[$\bullet$]  What are the key components of my approach and results? Also include any specific limitations.
-\end{description}
-  
-Then have a final paragraph or subsection: ``Summary of Contributions". It should list the major contributions in bullet form, mentioning in which sections they can be found. This material doubles as an outline of the rest of the paper, saving space and eliminating redundancy.
-
-\section{Related Work}
-
-The perennial question: Should related work be covered near the beginning of the paper or near the end?
-
-\begin{description}
-  \item[$\bullet$]  Beginning, if it can be short yet detailed enough, or if it's critical to take a strong defensive stance about previous work right away. In this case Related Work can be either a subsection at the end of the Introduction, or its own Section 2.
-  \item[$\bullet$]  End, if it can be summarized quickly early on (in the Introduction or Preliminaries), or if sufficient comparisons require the technical content of the paper. In this case Related Work should appear just before the Conclusions, possibly in a more general section ``Discussion and Related Work".
-\end{description}
-
-\section{The Body}
-
-\textbf{Guideline 1:} A clear new important technical contribution should have been articulated by the time the reader finishes page 3 i.e., a quarter of the way through the paper.
-
-\textbf{Guideline 2:} Every section of the paper should tell a story. Don't, however, fall into the common trap of telling the entire story of how you arrived at your results. Just tell the story of the results themselves. The story should be linear, keeping the reader engaged at every step and looking forward to the next step. There should be no significant interruptions -- those can go in the Appendix.
-\\
-\\
-Aside from these guidelines, which apply to every paper, the structure of the body varies a lot depending on content. Important components are:
-
-\begin{description}
-  \item[$\bullet$]  Running Example: When possible, use a running example throughout the paper. It can be introduced either as a subsection at the end of the Introduction, or its own Section 2 or 3 (depending on Related Work).
-  \item[$\bullet$]  Preliminaries: This section, which follows the Introduction and possibly Related Work and/or Running Example, sets up notation and terminology that is not part of the technical contribution. One important function of this section is to delineate material that's not original but is needed for the paper. Be concise -- remember Guideline 1.
-    \item[$\bullet$] Content: The meat of the paper includes algorithms, system descriptions, new language constructs, analyses, etc. Whenever possible use a ``top-down" description: readers should be able to see where the material is going, and they should be able to skip ahead and still get the idea.
-\end{description}
-
-
-\section{Performance Experiments}
-
-We could have an entire treatise on this topic alone and I am surely not the expert. Here are some random thoughts:
-
-\begin{description}
-  \item[$\bullet$]  Many conferences expect experiments.
-  \item[$\bullet$]  It's easy to do ``hokey" or meaningless experiments, and many papers do.
-  \item[$\bullet$]  It's easy to craft experiments to show your work in its best light, and most papers do.
-    \item[$\bullet$]  What should performance experiments measure? Possibilities:  
-    \begin{description}
-  	  \item[$\bullet$] Pure running time
-      \item[$\bullet$] Sensitivity to important parameters
-      \item[$\bullet$] Scalability in various aspects: data size, problem complexity, ...
-  \end{description}
-    \item[$\bullet$]  What should performance experiments show? Possibilities:
-        \begin{description}
-  	  \item[$\bullet$] Absolute performance i.e., it's acceptable/usable
-      \item[$\bullet$] Relative performance to naive approaches
-      \item[$\bullet$] Relative performance to previous approaches
-      \item[$\bullet$] Relative performance among different proposed approaches
-  \end{description}
-  \item[$\bullet$] 
-\end{description}
-
-
-\section{The Conclusions}
-
-In general a short summarizing paragraph will do, and under no circumstances should the paragraph simply repeat material from the Abstract or Introduction. In some cases it's possible to now make the original claims more concrete, e.g., by referring to quantitative performance results.
-
-\section{Future Work}
-
-This material is important -- part of the value of a paper is showing how the work sets new research directions. I like bullet lists here. A couple of things to keep in mind:
-\begin{description}
-  \item[$\bullet$]  If you're actively engaged in follow-up work, say so. E.g.: ``We are currently extending the algorithm to... blah blah, and preliminary results are encouraging." This statement serves to mark your territory.
-\item[$\bullet$]  Conversely, be aware that some researchers look to Future Work sections for research topics. My opinion is that there's nothing wrong with that -- consider it a compliment.
-\end{description}
-
-\section{The Acknowledgements}
-
-Don't forget them or you'll have people with hurt feelings. Acknowledge anyone who contributed in any way: through discussions, feedback on drafts, implementation, etc. If in doubt about whether to include someone, include them.
-
-
-\section{Citations}
-
-Spend the effort to make all citations complete and consistent. Do not just copy random inconsistent BibTex (or other) entries from the web and call it a day. Check over your final bibliography carefully and make sure every entry looks right.
-
-\section{Appendix A}
-This is a simple sample of a document created using \LaTeX
-   (specifically pdflatex) that includes a figure from the Vergil visual editor for Ptolemy II
-   that was created by printing to the Acrobat Distiller to get a PDF file.
-   It also illustrates a simple two-column conference paper style,
-   and use of bibtex to handle bibligraphies.
-
-This is a sample document for use with pdflatex, which is
-a program that is included with the Miktex distribution
-that directly produces PDF files from \LaTeX sources.
-To run \LaTeX on this file, you need the following files:
-\begin{enumerate}
-\item templatePDF.tex (this file)
-\item figure.pdf (the figure file)
-\item simpleConference.sty (style file)
-\item refs.bib (bibiliography file)
-\end{enumerate}
-\noindent
-To create a PDF file, execute the following commands:
-\begin{enumerate}
-\item pdflatex mainTemplatePDF
-\item bibtex mainTemplatePDF
-\item pdflatex mainTemplatePDF
-\item pdflatex mainTemplatePDF
-\end{enumerate}
-\noindent
-Yes (strangely) it is necessary to run pdflatex three times.
-The result will be a PDF file (plus several other files that \LaTeX
-produces).  You will need a mechanism, of course, for executing
-commands on the command line. If you are using Windows, I recommend
-installing Cygwin and using its bash shell.
-
-\section{Appendix B: How to Include Vergil Diagrams as Figures}
-
-\begin{figure}[!b]
-  \begin{center}
-    \includegraphics[width=3.5in]{figure.pdf}
-  \end{center}
-
-  \caption{\small Figure caption. To get a figure to span two
-      columns, use the environment figure* rather than figure.}
-  \label{fig-label}
-\end{figure}
-
-\begin{figure*}[!b]
-  \begin{center}
-    \includegraphics[width=3.5in]{figure.pdf}
-  \end{center}
-
-  \caption{\small Figure caption. To get a figure to span two
-      columns, use the environment figure* rather than figure.}
-  \label{fig-label}
-\end{figure*}
-
-Suppose you wish to include a figure, like that in figure \ref{fig-label}.
-The simplest mechanism is to install Adobe Acrobat, which includes
-a ``printer'' called ``Acrobat Distiller.'' Printing to this printer
-creates a PDF file, which can be included in a document as shown
-here.  To include Ptolemy II models \cite{PtolemyVol1:04},
-just print to the distiller from within Vergil and reference
-the PDF file in your \LaTeX document.
-
-There is a bit more work to do, however.
-The file that is produced by the distiller represents
-a complete page, not the individual figure.
-You can open it in using Acrobat (version 5.0 or later),
-and select Document $\to$ Crop Pages from the menu.
-In the resulting dialog, check ``Remove White Margins.''
-Save the modified PDF file in a file and then reference
-it in the \LaTeX file as shown in this example.
-
-An alternative is to generate EPS (encapsulated postscript),
-but the process is much more complex and fragile.
-I recommend using pdflatex and Adobe Acrobat.
 
 \bibliographystyle{abbrv}
 \bibliography{refs}
