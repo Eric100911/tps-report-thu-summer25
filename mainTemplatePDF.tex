@@ -64,9 +64,7 @@ chi.w@cern.ch  \\
 \thispagestyle{empty}
 
 \begin{abstract}
-The material in this template is an edited \& \LaTeX\--ified version of the recommendations here: \url{http://cs.stanford.edu/people/widom/paper-writing.html} The objective would be to help us writers, stay on topic and focused for each section of a report.
-
-For the abstract state the problem, your approach and solution, and the main contributions of the paper. Include little if any background and motivation. Be factual but comprehensive. The material in the abstract should not be repeated later word for word in the paper. 
+In this report, a preliminary search for simultaneous production of double $J/\psi$ and $\Upsilon$ mesons, double $J/\psi$ and $\phi$ mesons, or $J/\psi$, $\Upsilon$ and $\phi$ mesons in proton-proton collisions at $\sqrt{s} = 13.6 ~ \mathrm{TeV}$ at the CMS experiment is presented. The analysis is based on the data collected during the LHC Run 3 period from 2022 to 2024, with an integrated luminosity of approximately 176.6 fb$^{-1}$. A three-dimensional maximum likelihood fit is employed to extract the signal components. The results indicate a signal significance of $4.7 \sigma$ for the simultaneous production of double $J/\psi$ and $\phi$ mesons, with a yield of $130 \pm 30$ events. The analysis also provides insights into the effective cross-section for triple parton scattering processes.
 \end{abstract}
 
 
@@ -74,7 +72,7 @@ For the abstract state the problem, your approach and solution, and the main con
 
 \subsection{Multi-Parton Scattering in Proton-Proton Collisions}
 
-Proton consists of three quarks, two up-type and one down-type, and gluons, which hold together the three valence quarks, as well as of a 'sea' of virtual quark-antiquark pairs. These components are referred to as 'partons' and can be probed in proton-proton hard scatterings. In the standard picture of proton-proton (pp) collisions, typically only a few partons undergo a hard scattering with one another, with the remainders of each proton only slightly disturbed in the process. As the collision energy increases, the densities of gluons and sea quarks probed inside each proton grow rapidly. Thus, at higher collision energies, it becomes more likely for more than one pair of partons undergo a hard scattering in a single pp collision, leading to the simultaneous and independent production of two or more particles with transverse momentum ($p_T$) and/or mass ($m$) above a few giga-electronvolts. Such processes are collectively referred to as multi-parton scattering (MPS).
+Proton consists of three quarks, two up-type and one down-type, and gluons, which hold together the three valence quarks, as well as of a 'sea' of virtual quark-antiquark pairs. These components are referred to as 'partons' and can be probed in proton-proton hard scatterings. In the standard picture of proton-proton collisions, typically only a few partons undergo a hard scattering with one another, with the remainders of each proton only slightly disturbed in the process. As the collision energy increases, the densities of gluons and sea quarks probed inside each proton grow rapidly. Thus, at higher collision energies, it becomes more likely for more than one pair of partons undergo a hard scattering in a single pp collision, leading to the simultaneous and independent production of two or more particles with transverse momentum ($p_T$) and/or mass ($m$) above a few giga-electronvolts. Such processes are collectively referred to as multi-parton scattering (MPS).
 
 MPS processes offer an important probe into the complicated inner structure of the proton and its evolution with energy.\cite{DIEHL_MPI}\cite{BLOK_MPS} Many of these features, for example, the parton density profile in the plane transverse to the colliding beams, as well as the various correlations (in position, momentum, flavour, colour, spin and so on) between individual partons, are very difficult to calculate theoretically, since QCD behaves non-perturbatively in low-energy regions, and can only be mapped out through experimental studies of MPS in different systems and for different numbers $n$ of simultaneous scatterings \cite{MPI_LHC}.
 
@@ -719,9 +717,11 @@ A sample of approximately $3.6\times 10^6$ TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)
 \begin{table}[]
     \centering
     \caption{Full-chain Event Selection Criteria for $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$\\}
-    \begin{tabular}{cc}
+    \begin{tabular}{p{0.25\linewidth} p{0.65\linewidth}}
+    \toprule
         \textbf{Object} & \textbf{Criteria} \\
         Generated $J/\psi $         & $\left|y\right|<3$ \\
+        \midrule
         Generated $\Upsilon(1S)$    & $\left|y\right|<3$ \\
         \midrule
         Reconstructed $\mu^\pm $ & Muon ID "soft" \\
@@ -741,7 +741,7 @@ A sample of approximately $3.6\times 10^6$ TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)
                 & $p_T > 4.0\GeVc$ \\
                 & $|y| < 2.5$ \\
                 & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
-        \midrule
+        \bottomrule
     \end{tabular}
     \label{tab:JpsiJpsiY_MC_Full_Filter}
 \end{table}
