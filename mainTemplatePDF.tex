@@ -125,7 +125,7 @@ TPS processes in high-energy proton-proton collisions has drawn much attention b
 
 \begin{equation}
     \label{eqn:dps_tps_eff_xsec}
-    \effXsecTPS = \kappa \effXsecDPS \quad (\kappa = 0.82 \pm 0.11)
+    \effXsecTPS = \kappa \effXsecDPS \quad (\kappa = 0.82 \pm  0.11)
 \end{equation}
 
 A more specific study on TPS processes was conducted by H.-S. Shao and Y.-J. Zhang in 2019\cite{YJZ_TRI_JPSI}, in which they demonstrated the feasibility of using existing data to observe triple-$J/\psi$ hadroproduction and, using this process, to probe into TPS processes. A further work by Y.-J. Zhang demonstrated the feasibility of observing simultaneous production of $J/\psi$, $\Upsilon$ and a $\phi$ meson with $p_T > 2\GeVc$ in high-energy proton-proton collisions\cite{YJZ_MPS_REPORT}.
@@ -256,9 +256,9 @@ The CMS datasets typically accept events passing any one of a certain set of tri
 
 Given the excellent muon identification and measurement capability of the CMS detector,  we choose $J/\psi\to\mu^+\mu^-$ and $\Upsilon(nS)\to\mu^+\mu^-$ as the decay channel of these two heavy quarkonia. For $\phi$ mesons, the decay channel $\phi\to K^+K^-$ is chosen due to a relatively large branching ratio ($\approx 49\%$) \cite{PDG2020}.
 
-In reconstruction of $\phi$ mesons, due to a relatively low identification ability for soft charged particles, all non-muon charged tracks are assumed to be $K^\pm$ and the tracks are paired only with the opposite-sign requirement.
+In reconstruction of $\phi$ mesons, due to a relatively low identification ability for soft charged particles, all non-muon charged tracks are assumed to be $K^\pm $ and the tracks are paired only with the opposite-sign requirement.
 
-Given that the transverse momenta of these final-state paticles typically fall in the $\text{GeV}$ region, the dominant background component for simultaneous production is the combinatorial background, with uncorrelated muons from $B$ and $D$ meson decays and light hadrons from soft-QCD processes.
+Given that the transverse momenta of these final-state paticles typically fall in the $\text{GeV}$ region, the dominant background component for simultaneous production is the combinatorial background, with uncorrelated muons from semileptonic decay of $c$ and $b$ quarks.
 
 To reduce background components, a further set of selection (shown in Table \ref{tab:mu_K_cuts}) is applied to the objects for event reconstruction.
 
@@ -269,7 +269,7 @@ To reduce background components, a further set of selection (shown in Table \ref
     \toprule
     Particle & Selection Criteria \\
     \midrule
-    $\mu^\pm$ & Muon ID "soft" \\
+    $\mu^\pm $ & Muon ID "soft" \\
               & $|\eta| < 2.4$ \\
               & $p_T > 3.5\GeVc$ for $|\eta| < 1.2$ \\
               & $p_T > 2.5\GeVc$ for $1.2 < |\eta| < 2.4$ \\
@@ -282,7 +282,7 @@ To reduce background components, a further set of selection (shown in Table \ref
     \label{tab:mu_K_cuts}
 \end{table}
 
-To achieve a balance higher signal-to-noise ratio and event statistics, we apply further individual selection for each process in the final signal extraction.
+To further reject backgrounds, we apply further individual selection for each process in the final signal extraction.
 
 \section{Signal Extraction}
 
@@ -294,12 +294,14 @@ In extracting $pp\to J/\psi+J/\psi+\phi+X$ signals, we require further condition
     y = \frac{1}{2} \ln \frac {E-p_z}{E+p_z}
 \end{equation}
 
+It is worth mentioning that the $p_T > 4.0\GeVc$ selection for $\phi$ meson is also necessary to warranty true hard-scattering processes, since $\phi(s\bar{s})$ is a light flavour meson and can be produced in large amounts in soft-QCD processes in the collision with $p_T\lesssim 2\GeVc$. A proper $p_T$ threshold can effectively remove contribution from such soft processes.
+
 \begin{table}[]
     \centering
     \caption{Event selection for $pp\to J/\psi+J/\psi+\phi+X$ candidate events\\}
     \begin{tabular}{c p{0.66\linewidth}}
         \toprule
-        Object & Criteria \\
+        \textbf{Object} & \textbf{Criteria} \\
         \midrule
         $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
                  & $p_T > 6.0\GeVc$ \\
@@ -320,9 +322,219 @@ In extracting $pp\to J/\psi+J/\psi+\phi+X$ signals, we require further condition
 
 A three-dimensional maximum likelihood fit is used to extract the signal components. The $J/\psi$ signal shape is modelled with the sum of a Crystal Ball function and a Gaussian function, with all parameters left to float and background modelled by an exponential function. The $\phi$ signal shape on the di-Kaon invariant mass spectrum is taken to be a Gaussian function, also with all parameters left free to float and its combinatorial background modelled by a 4th-order polynomial. With all signal and backround components, we define further eight yield parameters.
 
-The fit projection is shown in Figure 
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{images/JpsiJpsiPhi_fit.png}
+    \caption{Fit result projection on individual invariant mass spectra}
+    \label{fig:JpsiJpsiPhi_fit}
+\end{figure}
+
+The fit result projection is shown in Figure  \ref{fig:JpsiJpsiPhi_fit}, with $130 \pm 30$ events seen from approximately 7450 candidate events.
+
+\begin{table}[]
+    \centering
+    \caption{}
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{Yield Parameter} & \textbf{Value} \\
+        \midrule
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{sig} }, \phi^\text{sig})$ & $130 \pm 30$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{sig} }, \phi^\text{sig})$ & $52 \pm 18$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{bkg} }, \phi^\text{sig})$ & $90 \pm 27$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{sig} }, \phi^\text{bkg})$ & $3476 \pm 128$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{bkg} }, \phi^\text{sig})$ & $48 \pm 19$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{sig} }, \phi^\text{bkg})$ & $684 \pm 55$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{bkg} }, \phi^\text{bkg})$ & $2024 \pm 120$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{bkg} }, \phi^\text{bkg})$ & $943 \pm 54$ \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:fitres_JpsiJpsiPhi}
+\end{table}
+
+The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiJpsiPhi}. The predominant background seen from fitting is the double-$J/\psi$ with no $\phi$ mesons, and we have seen a signal significance of$4.7 \sigma$ for the simultaneous production. The efficiency and cross-section analysis are to be determined with further Monte Carlo analyses.
+
+\subsection{$pp\to J/\psi+\Upsilon+\phi+X$}
+
+In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiYPhi} for the reconstructed candidate event. Compared to the criteria required for $pp \to J/\psi+J/\psi+\phi+X$ analysis, we expect a lower cross section from the relatively low yield of $\Upsilon$ compared to $J/\psi$. We are thus motivated to lower the $p_T$ threshold for $J/\psi$ and $\phi$, to obtain more candidate events. As we look into the lower-$p_T$ regions, the combinatorial background would increase and, to compensate for this, we increased the threshold for vertex fit probabilities for $J/\psi$ and $\phi$ decay vertices to further reject backgrounds.
+
+\begin{table}[]
+    \centering
+    \caption{Event selection for $pp\to J/\psi+\Upsilon+\phi+X$ candidate events\\}
+    \begin{tabular}{c p{0.66\linewidth}}
+        \toprule
+        \textbf{Object} & \textbf{Criteria} \\
+        \midrule
+        $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
+                 & $p_T > 4.0\GeVc$ \\
+                 & $|y| < 2.5$ \\
+                 & Opposite-sign muon pairs fitted to common vertex with $> 5\%$ probability \\
+                 \midrule
+        $\Upsilon$ & $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$ \\
+                 & $p_T > 4.0\GeVc$ \\
+                 & $|y| < 2.5$ \\
+                 & Opposite-sign muon pairs fitted to common vertex with $> 5\%$ probability \\
+                 & Reconstructed from muons passing "Tight" muon ID \\
+                 \midrule
+        $J/\psi+\Upsilon$ & Two candidates fitted to a common vertex with $> 1\%$ probability \\
+        \midrule
+        $\phi$ & $0.99 \GeVcs < m_{KK} < 1.07 \GeVcs$ \\
+               & Opposite-sign non-muon charged tracks fitted to common vertex with $> 5\%$ probability \\
+               & $p_T > 2.0\GeVc$ \\
+               \midrule
+        $J/\psi+J/\psi+\phi$ & Three mesons fitted to a common vertex with "valid" result \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:cut_JpsiYPhi}
+\end{table}
+
+A three-dimensional maximum likelihood fit is used to extract the signal components, with similar $J/\psi$ and $\phi$ signal shapes and each $\Upsilon$ resonance modelled by the sum of two CB functions, keeping only $\Upsilon(1S)$ mass and the fraction between the yields of different resonances to float.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{images/JpsiJpsiY_fit.png}
+    \caption{Fit result projection on individual invariant mass spectra}
+    \label{fig:JpsiYPhi_fit}
+\end{figure}
+
+The fit result projection is shown in Figure  \ref{fig:JpsiYPhi_fit}, with $31 \pm 11$ events seen from approximately 1950 candidate events.
+
+\begin{table}[]
+    \centering
+    \caption{Signal component extraction results from maximum-likelihood fit for $pp\to J/\psi+\Upsilon+\phi+X$\\}
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{Yield Parameter} & \textbf{Value} \\
+        \midrule
+        $N(J/\psi^{\text{sig}  },\Upsilon^{\text{sig} }, \phi^\text{sig})$ & $31 \pm 11$ \\
+        $N(J/\psi^{\text{bkg}  },\Upsilon^{\text{sig} }, \phi^\text{sig})$ & $15 \pm 11$ \\
+        $N(J/\psi^{\text{sig}  },\Upsilon^{\text{bkg} }, \phi^\text{sig})$ & $42 \pm 19$ \\
+        $N(J/\psi^{\text{sig}  },\Upsilon^{\text{sig} }, \phi^\text{bkg})$ & $111 \pm 31$ \\
+        $N(J/\psi^{\text{bkg}  },\Upsilon^{\text{bkg} }, \phi^\text{sig})$ & $43 \pm 18$ \\
+        $N(J/\psi^{\text{bkg}  },\Upsilon^{\text{sig} }, \phi^\text{bkg})$ & $79 \pm 29$ \\
+        $N(J/\psi^{\text{sig}  },\Upsilon^{\text{bkg} }, \phi^\text{bkg})$ & $937 \pm 55$ \\
+        $N(J/\psi^{\text{bkg}  },\Upsilon^{\text{bkg} }, \phi^\text{bkg})$ & $692 \pm 51$ \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:fitres_JpsiYPhi}
+\end{table}
+
+The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiYPhi}. The predominant background seen from fitting is the single-$J/\psi$ events, and we have seen a signal significance of $2.98 \sigma$ for the simultaneous production. The efficiency and cross-section analysis are also to be determined with further Monte Carlo analyses.
+
+\subsection{$pp\to J/\psi+J/\psi+\Upsilon+X$}
+
+\subsubsection{Signal Extraction of $pp\to J/\psi+J/\psi+\Upsilon+X$ Process Using Maximum-Likelihood Fit}
+
+In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiJpsiY} for the reconstructed candidate event. Compared to the $pp\to J/\psi+J/\psi+\phi+X$ process, we also expect a lower cross section from the relatively low yield of $\Upsilon$ compared to $\phi$. We are thus motivated to lower the $p_T$ threshold for $J/\psi$ again to obtain more candidate events. The threshold for vertex fit probabilities for $J/\psi$ and $\Upsilon$ decay vertices are also lowered.
+
+\begin{table}[]
+    \centering
+    \caption{Event selection for $pp\to J/\psi+J/\psi+\Upsilon+X$ candidate events\\}
+    \begin{tabular}{c p{0.66\linewidth}}
+        \toprule
+        \textbf{Object} & \textbf{Criteria} \\
+        $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
+                 & $p_T > 4.0\GeVc$ \\
+                 & $|y| < 2.5$ \\
+                 & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
+                 \midrule
+        $\Upsilon$ & $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$ \\
+                 & $p_T > 3.0\GeVc$ \\
+                 & $|y| < 2.5$ \\
+                 & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
+                 & Reconstructed from muons with $p_T>4.0\GeVc$ \\
+                 \midrule
+        $J/\psi+J/\psi$ & Two candidates fitted to a common vertex with "valid" result \\
+        \midrule
+        $J/\psi+J/\psi+\Upsilon$ & Three mesons fitted to a common vertex with "valid" result \\
+    \end{tabular}
+    \label{tab:cut_JpsiJpsiPhi}
+\end{table}
+
+A three-dimensional maximum likelihood fit is used to extract the signal components. With relatively limited statistics, the signal peaks are modelled using one Gaussian function each, with center value fixed at PDG values \cite{PDG2020} and neglecting the $\Upsilon(2S,3S)$ signals. The background is further modelled by second-order polynomials. With all signal and background components, we define further eight yield parameters.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{images/JpsiJpsiY_fit.png}
+    \caption{Fit result projection on individual invariant mass spectra}
+    \label{fig:JpsiJpsiY_fit}
+\end{figure}
+
+The fit result projection is shown in Figure  \ref{fig:JpsiJpsiY_fit}, with no significant results.
+
+\begin{table}[]
+    \centering
+    \caption{}
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{Yield Parameter} & \textbf{Value} \\
+        \midrule
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{sig} }, \Upsilon^\text{sig})$ & $0 \pm 3$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{sig} }, \Upsilon^\text{sig})$ & $7 \pm 7$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{bkg} }, \Upsilon^\text{sig})$ & $1 \pm 9$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{sig} }, \Upsilon^\text{bkg})$ & $9 \pm 8$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{bkg} }, \Upsilon^\text{sig})$ & $102 \pm 19$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{sig} }, \Upsilon^\text{bkg})$ & $80 \pm 19$ \\
+        $N(J/\psi^{[1], \text{sig} },J/\psi^{[2],\text{bkg} }, \Upsilon^\text{bkg})$ & $263 \pm 25$ \\
+        $N(J/\psi^{[1], \text{bkg} },J/\psi^{[2],\text{bkg} }, \Upsilon^\text{bkg})$ & $1544 \pm 48$ \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:my_label}
+\end{table}
+
+The predominant background seen from fitting is the double-$J/\psi$ with no $\Upsilon$ mesons. The low yield is believed to be due to the low cross section of the process.
+
+\subsubsection{Estimation of $\sigma_{\text{TPS}}^{pp\to J/\psi+J/\psi+\Upsilon+X}$}
+
+For the TPS component of the $pp\to J/\psi+J/\psi+\Upsilon+X$ process, the TPS effective cross section is taken to be $\effXsecTPS \approx 3 ~\text{mb}$ for this estimation. With SPS cross section reference values shown in Table \ref{tab:sps_xsec}, the TPS cross section is estimated to be:
+
+\begin{equation}
+    \begin{aligned}
+    & \sigma_{\text{TPS}}^{pp\to J/\psi+J/\psi+\Upsilon+X} \times \mathfrak{B}_{J/\psi\to\mu\mu}^2\mathfrak{B}_{\Upsilon\to\mu\mu} \\
+    & = \frac{2}{3!} \frac{\left(\sigma^{pp\to J/\psi+X}_{\text{SPS}}\right)^2\sigma^{pp\to \Upsilon+X}_{\text{SPS}}}{\effXsecTPS}\times \mathfrak{B}_{J/\psi\to\mu\mu}^2\mathfrak{B}_{\Upsilon\to\mu\mu} \\
+    & = \frac{1}{3} \frac{\left(\sigma^{pp\to J/\psi+X}_{\text{SPS}}\times \mathfrak{B}_{J/\psi\to\mu\mu}\right)^2\left(\sigma^{pp\to \Upsilon+X}_{\text{SPS}}\times\mathfrak{B}_{\Upsilon\to\mu\mu}\right)}{\effXsecTPS} \\
+    & \approx 0.36 ~\text{ab}
+    \end{aligned} 
+\end{equation}
+
+At present statistics ($\mathcal{L} \approx 176.6 ~\text{fb}^{-1}$), we expect much less than 1 event for the TPS contribution and $\approx 1$ event with full Run 4 data ($\mathcal{L} \approx 3 ~\text{ab}^{-1}$), given present analysis strategy. Such result calls for a more efficient analysis framework.
+
+\begin{table}[h!]
+    \centering
+    \caption{Caption}
+    \begin{tabular}{p{0.2\linewidth} p{0.38\linewidth} p{0.35\linewidth}}
+    \toprule
+        Process & Fiducial Region & Estimated Cross-section \\
+    \midrule
+        \multirow{2}{\linewidth}{$pp\to J/\psi+X$}&
+        $p_T\geq 6.0 \GeVc$ &
+        \multirow{2}{\linewidth}{$\sigma(pp\to J/\psi+X) \times \mathfrak{B}_{J/\psi\to\mu\mu} \approx 80 ~\text{nb}$} \\
+        & $|y| < 2.4$& \\
+        \multirow{2}{\linewidth}{$pp\to \Upsilon(nS) +X$}&
+        $p_T\in [10,120] \GeVc$ &
+        \multirow{2}{\linewidth}{$\sigma(pp\to \Upsilon+X) \times \mathfrak{B}_{\Upsilon\to\mu\mu} \approx 1~\text{nb}$} \\
+        & $|y| < 1.2$& \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:sps_xsec}
+\end{table}
 
 \section{Monte-Carlo (MC) Simulation Studies}
+
+\subsection{Software Used for Monte Carlo Event Generation and Simulation}
+
+HELAC-Onia 2.0 is an automated matrix element calculation tool dedicated to heavy-flavour quarkonia (such as $J/\psi$ and $\Upsilon(nS)$) studies. The matrix elements involved in heavy-flavour quarkonia production are calculated base on a NRQCD framework, giving the cross-section and dynamics characteristics in relevant processes and producing simulated events in Les Houches Event (LHE) format.
+
+Pythia 8 is a general-purpose event generator capable of simulating processes including hard scattering, parton showering, hadronization and decay in high-energy particle collisions.
+
+Geant 4 is a toolkit for particle-detector interaction simulation, with the capability of simulating the motion and interaction of particles in complex detector geometry and simulate the interaction between particles and detector modules in the broad energy range from eV to TeV level.
+
+\subsection{MC Simulation Procedure Based on CMS Software (CMSSW)}
+
+The 
+
+\subsection{LHE-level $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Studies}
+
+\subsection{Full-chain $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Results}
 
 \section{Conclusions}
 
