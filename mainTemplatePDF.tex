@@ -267,7 +267,7 @@ To reduce background components, a further set of selection (shown in Table \ref
     \caption{Selection for final-state objects analyzed}
     \begin{tabular}{cl}
     \toprule
-    Particle & Selection Criteria \\
+    \textbf{Object} & \textbf{Criteria} \\
     \midrule
     $\mu^\pm $ & Muon ID "soft" \\
               & $|\eta| < 2.4$ \\
@@ -286,7 +286,7 @@ To further reject backgrounds, we apply further individual selection for each pr
 
 \section{Signal Extraction}
 
-\subsection{$pp\to J/\psi+J/\psi+\phi+X$}
+\subsection{Data Analysis for $pp\to J/\psi+J/\psi+\phi+X$}
 
 In extracting $pp\to J/\psi+J/\psi+\phi+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiJpsiPhi} for the reconstructed candidate event, in which the pseudorapidity $y$ is defined by:
 
@@ -353,7 +353,7 @@ The fit result projection is shown in Figure  \ref{fig:JpsiJpsiPhi_fit}, with $1
 
 The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiJpsiPhi}. The predominant background seen from fitting is the double-$J/\psi$ with no $\phi$ mesons, and we have seen a signal significance of$4.7 \sigma$ for the simultaneous production. The efficiency and cross-section analysis are to be determined with further Monte Carlo analyses.
 
-\subsection{$pp\to J/\psi+\Upsilon+\phi+X$}
+\subsection{Data Analysis for $pp\to J/\psi+\Upsilon+\phi+X$}
 
 In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiYPhi} for the reconstructed candidate event. Compared to the criteria required for $pp \to J/\psi+J/\psi+\phi+X$ analysis, we expect a lower cross section from the relatively low yield of $\Upsilon$ compared to $J/\psi$. We are thus motivated to lower the $p_T$ threshold for $J/\psi$ and $\phi$, to obtain more candidate events. As we look into the lower-$p_T$ regions, the combinatorial background would increase and, to compensate for this, we increased the threshold for vertex fit probabilities for $J/\psi$ and $\phi$ decay vertices to further reject backgrounds.
 
@@ -420,7 +420,7 @@ The fit result projection is shown in Figure  \ref{fig:JpsiYPhi_fit}, with $31 \
 
 The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiYPhi}. The predominant background seen from fitting is the single-$J/\psi$ events, and we have seen a signal significance of $2.98 \sigma$ for the simultaneous production. The efficiency and cross-section analysis are also to be determined with further Monte Carlo analyses.
 
-\subsection{$pp\to J/\psi+J/\psi+\Upsilon+X$}
+\subsection{Data Analysis for $pp\to J/\psi+J/\psi+\Upsilon+X$}
 
 \subsubsection{Signal Extraction of $pp\to J/\psi+J/\psi+\Upsilon+X$ Process Using Maximum-Likelihood Fit}
 
@@ -432,6 +432,7 @@ In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, we require further condi
     \begin{tabular}{c p{0.66\linewidth}}
         \toprule
         \textbf{Object} & \textbf{Criteria} \\
+        \midrule
         $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
                  & $p_T > 4.0\GeVc$ \\
                  & $|y| < 2.5$ \\
@@ -446,6 +447,7 @@ In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, we require further condi
         $J/\psi+J/\psi$ & Two candidates fitted to a common vertex with "valid" result \\
         \midrule
         $J/\psi+J/\psi+\Upsilon$ & Three mesons fitted to a common vertex with "valid" result \\
+        \bottomrule
     \end{tabular}
     \label{tab:cut_JpsiJpsiPhi}
 \end{table}
@@ -522,19 +524,113 @@ At present statistics ($\mathcal{L} \approx 176.6 ~\text{fb}^{-1}$), we expect m
 
 \subsection{Software Used for Monte Carlo Event Generation and Simulation}
 
-HELAC-Onia 2.0 is an automated matrix element calculation tool dedicated to heavy-flavour quarkonia (such as $J/\psi$ and $\Upsilon(nS)$) studies. The matrix elements involved in heavy-flavour quarkonia production are calculated base on a NRQCD framework, giving the cross-section and dynamics characteristics in relevant processes and producing simulated events in Les Houches Event (LHE) format.
+HELAC-Onia 2.0 is an automated matrix element calculation tool dedicated to heavy-flavour quarkonia (such as $J/\psi$ and $\Upsilon(nS)$) studies. The matrix elements involved in heavy-flavour quarkonia production are calculated base on a NRQCD framework, giving the cross-section and dynamics characteristics in relevant processes and producing simulated events in Les Houches Event (LHE) format.\cite{HS_SHAO_HO}\cite{HS_SHAO_HO_2}
 
-Pythia 8 is a general-purpose event generator capable of simulating processes including hard scattering, parton showering, hadronization and decay in high-energy particle collisions.
+Pythia 8 is a general-purpose event generator capable of simulating processes including hard scattering, parton showering, hadronization and decay in high-energy particle collisions.\cite{PYTHIA_8_2}
 
-Geant 4 is a toolkit for particle-detector interaction simulation, with the capability of simulating the motion and interaction of particles in complex detector geometry and simulate the interaction between particles and detector modules in the broad energy range from eV to TeV level.
+Geant 4 is a toolkit for particle-detector interaction simulation, with the capability of simulating the motion and interaction of particles in complex detector geometry and simulate the interaction between particles and detector modules in the broad energy range from eV to TeV level.\cite{GEANT4}
 
-\subsection{MC Simulation Procedure Based on CMS Software (CMSSW)}
+CMS offline software (CMSSW) is a collection of software built for the CMS experiment, with the high-level goals of processing and selecting events inside the HLT system, delivering the processed results to the experimenters within the CMS Collaboration, and providing tools for them to analyze the processed data in order to produce physics results. The software employs a general data format of Event Data Model (EDM) and provides the services needed by the simulation, calibration and alignment, and reconstruction modules that process event data for physics analysis.
 
-The 
+\subsection{MC Simulation Procedure Based on CMSSW}
+
+\subsubsection{"GEN-SIM" Steps}
+
+This analysis uses HELAC-Onia 2.7.6 to generate simulated examples of the joint production of $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ in proton collisions, and stores the initial particle information in LHE file format. Subsequently, Pythia 8 is used to simulate the decay of $J/\psi$ and $\Upsilon$, as well as the hadronization processes of other particles, yielding information on the types, energies, momenta, and decay vertices of particles interacting with the detector, which is stored as GEN format data.
+
+Based on this information, Geant4 is used to model the interactions of generated particles with the various detector units in the CMS detector, taking into account the magnetic field and overall geometric configuration, and output GENSIM format data containing particle trajectories and detector responses.
+
+\subsubsection{"DIGI-RAW-MIX" Steps}
+
+Starting from the GENSIM format data, detector responses are converted into electronic signals with electronic noise, and simulated examples approximating the combined background are obtained from a ‘MinBias premix dataset’. The corresponding particle instances are superimposed onto the simulated instances, thereby simulating the phenomenon of multiple collision vertices appearing in a single beam bunch intersection, i.e., the pileup effect in particle collisions, and outputting RAWSIM format data.
+
+\subsubsection{"RECO-SKIM" Steps}
+
+Starting from the RAWSIM format, the L1T and HLT processes are further simulated, filtering events and outputting raw data (RAW); Subsequently, particle tracks and jets are reconstructed, generating AODSIM (analysis object data simulation) format data, which retains simplified particle information. After further skimming, MINIAODSIM format data is formed and handed over to the previously developed analysis framework for further processing, ultimately completing the entire simulation analysis workflow.
+
+\subsubsection{Computing Resources Used in MC Generation}
+
+To improve overall data processing speed, we utilise the CMS collaboration's CRAB computing resources and data management system to submit computing tasks to CERN's computing grid, achieving a complete data processing workflow from LHE files to Ntuples. The relevant configuration file documentation has been compiled into a working document and uploaded to the GitHub repository \href{https://github.com/Eric100911/LHE-to-SKIM}{Eric100911/LHE-to-SKIM}.
+
+\subsubsection{Event Mixing Method Employed in Event Generation}
+
+The simulation generation methods for $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events generated by different mechanisms are also different. With the pp\_NOnia\_MPS plugin in HELAC-Onia 2.7.6, TPS events of $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ are directly obtained. For the DPS process, it is necessary to first generate samples of $J/\psi+\ J/\psi$ and $J/\psi+\Upsilon$ produced through SPS process, as well as single-$J/\psi$ and single-$\Upsilon$ produced. Based on this, by performing random mixing, two types of simulated samples of $J/\psi+J/\psi+\Upsilon$ produced by the DPS process.
 
 \subsection{LHE-level $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Studies}
 
+A series of event samples was generated using HELAC-Onia 2.7.6
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{Object} & \textbf{Criteria} \\
+        \midrule
+        Generated $J/\psi $   & $\left|y\right|<3$ \\
+        Generated $\Upsilon$  & $\left|y\right|<3$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+
+
+After processing this batch of events, a total of 220 candidate combinations were obtained from 64 events. Based on this, we preliminarily estimate that, without further applying particle transverse momentum screening conditions, the overall efficiency of averaging events across the entire dynamical phase space, reconstruction, and screening is approximately of the order of {10}^{-4}.
+Using the criterion of ‘maximum sum of transverse momenta of three-quark mesons’ to select candidate combinations, the following set of invariant mass spectra was obtained when only the mass window selection condition was applied:
+Figure 3 Invariant mass spectra of muon pairs and overall invariant mass spectra of three-quark mesons in the first batch of Monte Carlo data
+If the full selection conditions are further applied, the invariant mass spectra are as follows:
+Figure 4: Invariant mass spectrum of muon pairs and overall invariant mass spectrum of three-quark pairs from the first batch of Monte Carlo data after screening
+It can be seen that this screening condition can exclude part of the background signal. To further optimise the screening conditions and test the efficiency of the analysis software framework, we generated a larger set of Monte Carlo simulation examples.
+5. Progress in the analysis of the second and third batches of simulation data
+The analysis of the second batch of Monte Carlo simulations was conducted in May 2025, using HELAC-Onia 2.7.6 to generate 972,249 examples jointly produced by the TPS process J/\psi+J/\psi+\Upsilon\left(1S\right), and applying the following screening conditions:
+Table 5 Selection criteria for the second batch of Monte Carlo simulation analysis
+Selection target    Selection criteria
+Simulated J/\psi        Velocity \left|y\right|<3
+Simulated \Upsilon        Velocity \left|y\right|<3
+All muons used for J/\psi and \Upsilon reconstruction        Muon identification and reconstruction mass label: soft
+	For the pseudorapidity interval |η| < 1.2:
+Transverse momentum p_T > 3.5 GeV/c
+For the pseudorapidity interval 1.2 < |η| < 2.4:
+	Transverse momentum p_T > 2.5 GeV/c
+Reconstructed J/\psi        muon pair invariant mass m_{\mu^+\mu^-}: 2.5 GeV < mμ+μ- < 3.5 GeV
+	Axisymmetric momentum |y| < 2.5
+Reconstructed \Upsilon        \muon pair invariant mass m_{\mu^+\mu^-}: 8.0\mathrm{GeV} < m_{\mu^+\mu^-} < 12.0\mathrm{GeV}
+    Axisymmetric momentum |y| < 2.5
+
+After processing this batch of events, a total of 619 candidate combinations were obtained from 483 events. Based on this, we preliminarily estimate that, without further applying screening conditions such as particle transverse momentum, the overall efficiency of averaging events across the entire dynamical phase space, reconstruction, and screening is approximately {10}^{-4} magnitude, which is close to the results of the first batch.
+The third batch of Monte Carlo simulation analyses began in late June 2025. In this batch of analyses, additional dynamical constraints were applied to the simulated \ J/\psi and \Upsilon particles. This is because, in the process of processing real collision data, it was observed that to effectively exclude candidate combinations corresponding to composite background processes, it is necessary to impose an overall transverse momentum restriction of p_T\left(\mu^+\mu^-\right)>2\ \mathrm{GeV/c} on the reconstructed muon pairs. However, the proportion of \ J/\psi and \Upsilon satisfying this condition in the simulated data is already low. Based on this, when using HELAC-Onia for event generation, we directly set a screening condition of p_T > 2 GeV/c for the simulated \ J/\psi and \Upsilon particles. This helps reduce unnecessary simulation calculations and improve overall computational efficiency while not significantly altering the final screening and reconstruction results, thereby reducing server machine time usage.
+In terms of data processing workflow, in the third batch of Monte Carlo simulation analyses, we plan to switch to using the HTCondor distributed computing resources provided by the CERN lxplus cluster, which reduces the time required to transfer post-processing result files. Additionally, we have merged the computational tasks from GENSIM format data to MiniAOD format data into a single computational script, thereby reducing the disk space occupied by intermediate process files.
+Currently, in the third batch of Monte Carlo simulation analyses, 3,754,619 J/\psi+J/\psi+\Upsilon\left(1S\right) events have been generated using HELAC-Onia, 2,048,030 J/\psi+J/\psi+\Upsilon\left(2S\right) events, and 2,305,057 J/\psi+J/\psi+\Upsilon\left(3S\right) events. As of the time of writing this report, subsequent data processing steps are still pending.
+In subsequent analyses, we will further refine the kinetic quantity correlation analysis for J/\psi and \Upsilon, as well as the matching verification between reconstructed particles and simulated particles, and conduct a more detailed evaluation of the reconstruction efficiency of J/\psi and \Upsilon in different kinetic intervals to facilitate subsequent efficiency corrections.
+
 \subsection{Full-chain $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Results}
+
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{cc}
+         \textbf{Object} & \textbf{Criteria} \\
+         Generated $J/\psi $   & $\left|y\right|<3$ \\
+         Generated $\Upsilon$  & $\left|y\right|<3$ \\
+         \midrule
+         $\mu^\pm $ & Muon ID "soft" \\
+              & $|\eta| < 2.4$ \\
+              & $p_T > 3.5\GeVc$ for $|\eta| < 1.2$ \\
+              & $p_T > 2.5\GeVc$ for $1.2 < |\eta| < 2.4$ \\
+         \midrule
+         $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
+              & $p_T > 4.0\GeVc$ \\
+              & $|y| < 2.5$ \\
+              & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
+         \midrule
+         $\Upsilon$ & $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$ \\
+              & $|y| < 2.5$ \\
+              & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
+        \midrule
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
 
 \section{Conclusions}
 
