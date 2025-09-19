@@ -1,6 +1,7 @@
 *
 */*
 !.gitignore
+!.github/workflows
 !LICENSE
 !mainTemplatePDF.tex
 !refs.bib
