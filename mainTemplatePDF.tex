@@ -42,7 +42,7 @@
 \newcommand*{\effXsecTPS}{\sigma_{\text{eff,TPS}}}
 \newcommand*{\GeV}{~\text{GeV}}
 \newcommand*{\GeVc}{~\text{GeV/c}}
-\newcommand*{\GeVcs}{~\text{GeV/c}^2}
+\newcommand*{\GeVcs}{~\text{GeV}\text{c}^2}
 
 \renewcommand{\arraystretch}{1.2}
 
@@ -78,9 +78,9 @@ MPS processes offer an important probe into the complicated inner structure of t
 
 In addition to providing an insight into proton structure, MPS studies also contributes to background subtraction in future searches for rare standard model and beyond-standard model resonances, especially at future hadron colliders, where the MPS contribution to the backgound becomes more significant due to higher centre-of-mass energy.\cite{DdE_TPS}\cite{YJZ_TRI_JPSI}
 
-\subsection{The "Pocket Formula" and $\sigma_{\text{eff,NPS}}$}
+\subsection{The "Pocket Formula" and \texorpdfstring{$\sigma_{\text{eff,NPS}}$}{TPS Effective Cross-Section}}
 
-Under the most simple assumption that the individual sub-scatterings are independent, one may consider the probability for the multiple production of particles with a high transverse momentum proportional to the product of the probabilities for each individual sub-scattering. This relation is more commonly expressed in terms of cross sections as the "pocket formula" shown below, for an arbitrary number $n$ of sub-scatterings:
+Under the most simple assumption that the individual sub-scatterings are independent, one may consider the probability for the multiple production of particles with a high transverse momentum proportional to the product of the probabilities for each individual sub-scattering. This relation is more commonly expressed in terms of cross-sections as the "pocket formula" shown below, for an arbitrary number $n$ of sub-scatterings:
 
 \begin{equation}
 \begin{aligned}
@@ -90,7 +90,7 @@ Under the most simple assumption that the individual sub-scatterings are indepen
 \end{aligned}
 \end{equation}
 
-In the "pocket formula" (Eqn. \ref{eqn:nps_pocket}), the effective cross section $\sigma_{\text{eff,NPS}}$ is only determined by the transverse parton density overlap, and the combinatorial factor $\mathfrak{m}$ is used to remove the duplicate counting from same-type particle final states.
+In the "pocket formula" (Eqn. \ref{eqn:nps_pocket}), the effective cross-section $\sigma_{\text{eff,NPS}}$ is only determined by the transverse parton density overlap, and the combinatorial factor $\mathfrak{m}$ is used to remove the duplicate counting from same-type particle final states.
 
 Double parton scattering (DPS) processes are the most trivial MPS processes and the first observed. The first observation of DPS processes was made by the AFS collaboration on the Intersecting Storage Ring (ISR) at CERN\cite{AxialFieldSpectrometer:1986dfj}. Since then, a variety of DPS processes have been studied on high-energy hadron colliders such as the Tevatron and the Large Hadron Collider (LHC).
 
@@ -109,7 +109,7 @@ From the transverse parton density functions adopted by event generators like \t
 \begin{figure}
     \centering
     \includegraphics[width=1.0\linewidth]{images/sigma_eff_DPS_summary.png}
-    \caption{Summary of current $\effXsecDPS$ measurement results in various final states, including results from the triple-$J/\psi$ production process on the top.\cite{CMS_TRI_JPSI}}
+    \caption{Summary of current \texorpdfstring{$\effXsecDPS$}{DPS effective cross-section} measurement results in various final states, including results from the triple-$J/\psi$ production process on the top.\cite{CMS_TRI_JPSI}}
     \label{fig:sigma-eff-dps-summary}
 \end{figure}
 
@@ -265,7 +265,7 @@ To reduce background components, a further set of selection is applied to the ob
 
 \section{Signal Extraction}
 
-\subsection{Data Analysis for $pp\to J/\psi+J/\psi+\phi+X$}
+\subsection{Data Analysis for \texorpdfstring{$pp\to J/\psi+J/\psi+\phi+X$}{pp -> J/psi + J/psi + phi}}
 
 In extracting $pp\to J/\psi+J/\psi+\phi+X$ signals, we require further conditions shown in Table \ref{tab:cut_JpsiJpsiPhi} for the reconstructed candidate event, in which the pseudorapidity $y$ is defined by (where direction $z$ is taken to be the beam direction):
 
@@ -291,7 +291,7 @@ It is worth mentioning that the $p_T > 4.0\GeVc$ selection for $\phi$ meson is a
 
 \begin{table}[]
     \centering
-    \caption{Event selection for $pp\to J/\psi+J/\psi+\phi+X$ candidate events\\}
+    \caption{Event selection for \texorpdfstring{$pp\to J/\psi+J/\psi+\phi+X$}{pp -> J/psi + J/psi + phi} candidate events\\}
     \begin{tabular}{c p{0.66\linewidth}}
         \toprule
         \textbf{Object} & \textbf{Criteria} \\
@@ -355,9 +355,9 @@ The fit result projection is shown in Figure  \ref{fig:JpsiJpsiPhi_fit}, with $1
 
 The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiJpsiPhi}. The predominant background seen from fitting is double-$J/\psi$ events without $\phi$ mesons, and a signal significance of $4.7 \sigma$ is concluded for the simultaneous production. The efficiency and cross-section analysis are to be determined with further Monte Carlo analyses.
 
-\subsection{Data Analysis for $pp\to J/\psi+\Upsilon+\phi+X$}
+\subsection{Data Analysis for \texorpdfstring{$pp\to J/\psi+\Upsilon+\phi+X$}{pp -> J/psi + Upsilon + phi}}
 
-In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, a set of selection criteria is shown in Table \ref{tab:cut_JpsiYPhi} for the reconstructed candidate event. Compared to the criteria required for $pp \to J/\psi+J/\psi+\phi+X$ analysis, a lower cross section is expected from the relatively low yield of $\Upsilon$ compared to $J/\psi$. The $p_T$ threshold for $J/\psi$ and $\phi$ is thus lowered to enable more candidate events to pass the selection. In the lower-$p_T$ region, however, a higher combinatorial background can be seen and, to compensate for this, the threshold for $J/\psi$ and $\phi$ decay vertex fit probabilities is increased to further reject backgrounds.
+In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, a set of selection criteria is shown in Table \ref{tab:cut_JpsiYPhi} for the reconstructed candidate event. Compared to the criteria required for $pp \to J/\psi+J/\psi+\phi+X$ analysis, a lower cross-section is expected from the relatively low yield of $\Upsilon$ compared to $J/\psi$. The $p_T$ threshold for $J/\psi$ and $\phi$ is thus lowered to enable more candidate events to pass the selection. In the lower-$p_T$ region, however, a higher combinatorial background can be seen and, to compensate for this, the threshold for $J/\psi$ and $\phi$ decay vertex fit probabilities is increased to further reject backgrounds.
 
 \begin{table}[]
     \centering
@@ -431,11 +431,11 @@ The fit result projection is shown in Figure  \ref{fig:JpsiYPhi_fit}, with $31 \
 
 The yield parameters obtained through fitting are as listed in Table \ref{tab:fitres_JpsiYPhi}. The predominant background seen from fitting is the single-$J/\psi$ events, and a signal significance of $2.98 \sigma$ is concluded for the simultaneous production. The efficiency and cross-section analysis are also to be determined with further Monte Carlo analyses.
 
-\subsection{Data Analysis for $pp\to J/\psi+J/\psi+\Upsilon+X$}
+\subsection{Data Analysis for \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon}}
 
-\subsubsection{Signal Extraction of $pp\to J/\psi+J/\psi+\Upsilon+X$ Process Using Maximum-Likelihood Fit}
+\subsubsection{Signal Extraction of \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon} Process Using Maximum-Likelihood Fit}
 
-In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, selection criteria shown in Table \ref{tab:cut_JpsiJpsiY} are applied for the reconstructed candidate event. Compared to the $pp\to J/\psi+J/\psi+\phi+X$ process, a lower cross section is again expected due to the relatively low yield of $\Upsilon$ compared to $\phi$. The $p_T$ threshold for $J/\psi$ is again lowered to allow more candidate events pass the selection. The threshold for vertex fit probabilities for $J/\psi$ and $\Upsilon$ decay vertices are also lowered.
+In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, selection criteria shown in Table \ref{tab:cut_JpsiJpsiY} are applied for the reconstructed candidate event. Compared to the $pp\to J/\psi+J/\psi+\phi+X$ process, a lower cross-section is again expected due to the relatively low yield of $\Upsilon$ compared to $\phi$. The $p_T$ threshold for $J/\psi$ is again lowered to allow more candidate events pass the selection. The threshold for vertex fit probabilities for $J/\psi$ and $\Upsilon$ decay vertices are also lowered.
 
 \begin{table}[]
     \centering
@@ -503,11 +503,11 @@ The fit result projection is shown in Figure  \ref{fig:JpsiJpsiY_fit}, with no s
     \label{tab:my_label}
 \end{table}
 
-The predominant background seen from fitting is the double-$J/\psi$ events without $\Upsilon$ mesons. The low yield is believed to be due to the low cross section of the process.
+The predominant background seen from fitting is the double-$J/\psi$ events without $\Upsilon$ mesons. The low yield is believed to be due to the low cross-section of the process.
 
-\subsubsection{Estimation of $\sigma_{\text{TPS}}^{pp\to J/\psi+J/\psi+\Upsilon+X}$}
+\subsubsection{Estimation of \texorpdfstring{$\sigma_{\text{TPS}}^{pp\to J/\psi+J/\psi+\Upsilon+X}$}{TPS J/psi + J/psi + Upsilon Cross-Section}}
 
-For the TPS component of the $pp\to J/\psi+J/\psi+\Upsilon+X$ process, the TPS effective cross section is taken to be $\effXsecTPS \approx 3 ~\text{mb}$ for this estimation. With SPS cross section reference values shown in Table \ref{tab:sps_xsec}, the TPS cross section is estimated to be:
+For the TPS component of the $pp\to J/\psi+J/\psi+\Upsilon+X$ process, the TPS effective cross-section is taken to be $\effXsecTPS \approx 3 ~\text{mb}$ for this estimation. With SPS cross-section reference values shown in Table \ref{tab:sps_xsec}, the TPS cross-section is estimated to be:
 
 \begin{equation}
     \begin{aligned}
@@ -576,7 +576,7 @@ To improve overall data processing speed, we utilise the CMS collaboration's CRA
 
 The simulation generation methods for $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events generated by different mechanisms are also different. With the pp\_NOnia\_MPS plugin in HELAC-Onia 2.7.6, TPS events of $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ are directly obtained. For the DPS process, it is necessary to first generate samples of $J/\psi+J/\psi$ and $J/\psi+\Upsilon$ produced through SPS process, as well as single-$J/\psi$ and single-$\Upsilon$ produced. Based on this, by performing random mixing, two types of simulated samples of $J/\psi+J/\psi+\Upsilon$ produced by the DPS process.
 
-\subsection{LHE-level $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Studies}
+\subsection{LHE-level \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon + X} Event Simulation Studies}
 
 \subsubsection{Event Generation and Filtering}
 
@@ -584,7 +584,7 @@ A series of event samples was generated using HELAC-Onia 2.7.6, with generator-l
 
 \begin{table}[]
     \centering
-    \caption{Generation-level Event Filter Criteria for $pp\to J/\psi+J/\psi+\Upsilon+X$\\}
+    \caption{Generation-level Event Filter Criteria for \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon + X}\\}
     \label{tab:JpsiJpsiY_MC_GEN_Filter}
     \begin{tabular}{cc}
         \toprule
@@ -616,7 +616,7 @@ After applying the generator-level filter (Table \ref{tab:JpsiJpsiY_MC_GEN_Filte
 
 These filtered event samples, stored in Les Houches Event (LHE) format, are used for further analysis in the following sections.
 
-\subsubsection{Demonstrating Particle Correlation at LHE Level with $\Delta y - \Delta \phi$ Distribution Plot}
+\subsubsection{Demonstrating Particle Correlation at LHE Level with \texorpdfstring{$\Delta y - \Delta \phi$}{Delta y - Delta phi} Distribution Plot}
 
 The correlation between the produced particles can be demonstrated through the $\Delta y - \Delta \phi$ and $\Delta |y| - \Delta \phi$ distribution of the generated particles. At LHE level, the distribution is presented in Figures \ref{fig:TPS_JJY1S_filtered_correlation_LHE}, \ref{fig:DPS01_JJY1S_filtered_correlation_LHE} and \ref{fig:DPS02_JJY1S_filtered_correlation_LHE}.
 
@@ -631,14 +631,14 @@ The correlation between the produced particles can be demonstrated through the $
     \centering
     \includegraphics[width=1.0\linewidth]{images/yabs_LHE_LEVEL_DPS_JY1S_J_correlation_filtered_p2.png}
     \caption{Correlation between generated particles in DPS-01 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events at LHE level}
-    \label{fig:TPS_JJY1S_filtered_correlation_LHE}
+    \label{fig:DPS01_JJY1S_filtered_correlation_LHE}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[width=1.0\linewidth]{images/yabs_LHE_LEVEL_DPS_JJ_Y1S_correlation_filtered_p2.png}
     \caption{Correlation between generated particles in DPS-02 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events at LHE level}
-    \label{fig:TPS_JJY1S_filtered_correlation_LHE}
+    \label{fig:DPS02_JJY1S_filtered_correlation_LHE}
 \end{figure}
 
 The difference in the correlation between the generated particles in TPS and DPS processes is evident, especially in the $\Delta \phi$ projection. These plots demonstrate the feasibility of separating the components in the subsequent analysis. Such properties can also be seen on the one dimensional distribution of $\Delta y$, $\Delta \phi$ and $\Delta R$ in Figures .
@@ -710,7 +710,7 @@ The LHE-level results show the feasibility of separating DPS and TPS components 
 
 To gain a more realistic prediction of particle correlation, a set of full-chain simulation and reconstruction is performed as the procedure described in the section \ref{sec:MC-FullChain}. Simulation results are presented in the next section.
 
-\subsection{Full-chain $pp\to J/\psi+J/\psi+\Upsilon+X$ Event Simulation Results}
+\subsection{Full-chain \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon + X} Event Simulation Results}
 
 A sample of approximately $3.6\times 10^6$ TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events was generated using HELAC-Onia 2.7.6, without any generator-level filter. The events were then processed through the full chain of simulation and reconstruction described in Section \ref{sec:MC-FullChain}. After passing the full filter condition shown in Table \ref{tab:JpsiJpsiY_MC_Full_Filter}, a total of 441 events were obtained. Due to limited statistics, only individual $\Delta \phi$, $\Delta y$ and $\Delta R$ distributions are plotted. 
 
@@ -792,5 +792,5 @@ This work is carried out under the supervision of Dr. Zhen Hu and in collaborati
 Much help has been received from the Tsinghua CMS group, including but not limited to the following members: Dr. Zhen Hu, Yiyang Zhao, Xining Wang, Shiyang Chen. The author would like to express his gratitude for their help and support.
 
 \bibliographystyle{abbrv}
-\bibliography{refs}
+\bibliography{mainTemplatePDF.bib}
 \end{document}
