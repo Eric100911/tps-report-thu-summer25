@@ -4,6 +4,7 @@
 !.github
 !.github/workflows
 !LICENSE
+!README.md
 !mainTemplatePDF.tex
 !refs.bib
 !generate_bib.py
