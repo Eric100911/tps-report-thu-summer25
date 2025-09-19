@@ -106,7 +106,7 @@ In DPS processes, the "pocket formula" can be more specifically written with the
 
 From the transverse parton density functions adopted by event generators like \textsc{Pythia 8} and \textsc{Herwig++}, it is expected that the $\sigma_\text{eff,DPS}$ would fall in the range of $20 \sim 30~\mathrm{mb}$ and would not depend on the final state studies. However, as summarized in Figure \ref{fig:sigma-eff-dps-summary}, $\sigma_\text{eff,DPS}$ results obtained from experiments have been much lower, with $\sigma_\text{eff,DPS}\approx 10\sim 20~\text{mb}$ from final states containing jets and/or electroweak bosons\cite{ATLAS_4JET_7TEV}\cite{ATLAS_WJetJet_7TEV}\cite{ATLAS_Z_JPSI}\cite{CDF_4JET}\cite{CMS_4JET_13TEV}\cite{CMS_WJETJET_7TEV}\cite{CMS_WW_DPS_8TEV_LIM}\cite{CMS_WW_DPS_13TEV_FOUND}, and even lower values of $\sigma_\text{eff,DPS}\approx 3\sim 10~\text{mb}$ extracted from processes where two heavy quarkonia like $J/\psi$ and $\Upsilon$ are produced\cite{ATLAS_JPSIJPSI_8TEV}\cite{ATLAS_JPSI_PSI2S_7_8_TEV_COMBINED}\cite{CMS_INCL_JPSIJPSI_7TEV}\cite{ CMS_JPSIPSI2S_7TEV}\cite{CMS_JPSIPSI2S_DIFF_7TEV}\cite{CMS_YY_8TEV}\cite{CMS_YY_XSEC}.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/sigma_eff_DPS_summary.png}
     \caption{Summary of current \texorpdfstring{$\effXsecDPS$}{DPS effective cross-section} measurement results in various final states, including results from the triple-$J/\psi$ production process on the top.\cite{CMS_TRI_JPSI}}
@@ -136,7 +136,7 @@ The Large Hadron Collider (LHC) operated by the European Organization of Nuclear
 
 Four major particle detectors, CMS, ATLAS, ALICE and LHCb, are each located at one of the four interaction points, measuring the key properties of particles produced in collision with their unique detector modules, and acquire data for further physics analysis.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/CMS_pileup_allYears_run3.png}
     \caption{Average number of interactions per bunch crossing in LHC Run 3 by year\cite{CMS:LUMI-PUB}}
@@ -149,7 +149,7 @@ One important consequence of the high luminosity is the "pileup" effect, i.e., i
 
 The Compact Muon Solenoid (CMS) (shown in Figure \ref{fig:CMS-disection}) is one of the two general-purpose detectors on LHC. The detector itself measures 21 meters long and 15 meters in diameter, with a total weight of approximately 14,000 tonnes.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/CMS_disection_Run2.png}
     \caption{A schematic dissection of the CMS detector\cite{CMS_CUTAWAY_DIAGRAM}}
@@ -165,13 +165,6 @@ Another distinctive advantage of CMS is its muon measurement capability, owing t
 \subsection{Dataset}
 
 The datasets analyzed are \textsc{ParkingDoubleMuonLowMass} collected from 2022 to 2024, entirely during the LHC Run 3 period with a collision energy of $\sqrt{s} = 13.6 ~\text{TeV}$ and an integrated luminosity of $\mathcal{L}\approx176.6~\text{fb}^{-1}$. The datasets are required to be certified as "muon" physics datasets.\cite{CMS:LUM-22-001}\cite{CMS:DP-LUMI-2023}\cite{CMS:LUMI-PUB}.
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=1.0\linewidth]{images/CMS_int_lumi_Run3.png}
-%     \caption{Cumulative luminosity delivered to CMS versus date during  LHC Run 3 \cite{CMS:LUMI-PUB}}
-%     \label{fig:CMS_int_lumi}
-% \end{figure}
 
 \begin{table*}[h!]
     \centering
@@ -289,7 +282,7 @@ where the polar angle $\theta$ is defined as the angle between the particle mome
 
 It is worth mentioning that the $p_T > 4.0\GeVc$ selection for $\phi$ meson is also necessary to warranty true hard-scattering processes, since $\phi(s\bar{s})$ is a light flavour meson and can be produced in large amounts in soft-QCD processes in the collision with $p_T\lesssim 1\GeVc$. A proper $p_T$ threshold can effectively remove contribution from such soft processes.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Event selection for \texorpdfstring{$pp\to J/\psi+J/\psi+\phi+X$}{pp -> J/psi + J/psi + phi} candidate events\\}
     \begin{tabular}{c p{0.66\linewidth}}
@@ -324,7 +317,7 @@ It is worth mentioning that the $p_T > 4.0\GeVc$ selection for $\phi$ meson is a
 
 A three-dimensional maximum likelihood fit is used to extract the signal components. The $J/\psi$ signal shape is modelled with the sum of a Crystal Ball function and a Gaussian function, with all parameters left to float and background modelled by an exponential function. The $\phi$ signal shape on the di-Kaon invariant mass spectrum is taken to be a Gaussian function, also with all parameters left free to float and its combinatorial background modelled by a 4th-order polynomial. With all signal and backround components, we define further eight yield parameters.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/JpsiJpsiPhi_fit.png}
     \caption{Fit result projection on individual invariant mass spectra}
@@ -333,7 +326,7 @@ A three-dimensional maximum likelihood fit is used to extract the signal compone
 
 The fit result projection is shown in Figure  \ref{fig:JpsiJpsiPhi_fit}, with $130 \pm 30$ events seen from approximately 7450 candidate events.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{}
     \begin{tabular}{cc}
@@ -359,7 +352,7 @@ The yield parameters obtained through fitting are as listed in Table \ref{tab:fi
 
 In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, a set of selection criteria is shown in Table \ref{tab:cut_JpsiYPhi} for the reconstructed candidate event. Compared to the criteria required for $pp \to J/\psi+J/\psi+\phi+X$ analysis, a lower cross-section is expected from the relatively low yield of $\Upsilon$ compared to $J/\psi$. The $p_T$ threshold for $J/\psi$ and $\phi$ is thus lowered to enable more candidate events to pass the selection. In the lower-$p_T$ region, however, a higher combinatorial background can be seen and, to compensate for this, the threshold for $J/\psi$ and $\phi$ decay vertex fit probabilities is increased to further reject backgrounds.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Event selection for $pp\to J/\psi+\Upsilon+\phi+X$ candidate events\\}
     \begin{tabular}{c p{0.66\linewidth}}
@@ -400,7 +393,7 @@ In extracting $pp\to J/\psi+\Upsilon+\phi+X$ signals, a set of selection criteri
 
 A three-dimensional maximum likelihood fit is used to extract the signal components, with similar $J/\psi$ and $\phi$ signal shapes and each $\Upsilon$ resonance modelled by the sum of two CB functions, keeping only $\Upsilon(1S)$ mass and the fraction between the yields of different resonances to float.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/JpsiJpsiY_fit.png}
     \caption{Fit result projection on individual invariant mass spectra}
@@ -409,7 +402,7 @@ A three-dimensional maximum likelihood fit is used to extract the signal compone
 
 The fit result projection is shown in Figure  \ref{fig:JpsiYPhi_fit}, with $31 \pm 11$ events seen from approximately 1950 candidate events.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Signal component extraction results from maximum-likelihood fit for $pp\to J/\psi+\Upsilon+\phi+X$\\}
     \begin{tabular}{cc}
@@ -437,7 +430,7 @@ The yield parameters obtained through fitting are as listed in Table \ref{tab:fi
 
 In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, selection criteria shown in Table \ref{tab:cut_JpsiJpsiY} are applied for the reconstructed candidate event. Compared to the $pp\to J/\psi+J/\psi+\phi+X$ process, a lower cross-section is again expected due to the relatively low yield of $\Upsilon$ compared to $\phi$. The $p_T$ threshold for $J/\psi$ is again lowered to allow more candidate events pass the selection. The threshold for vertex fit probabilities for $J/\psi$ and $\Upsilon$ decay vertices are also lowered.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Event selection for $pp\to J/\psi+J/\psi+\Upsilon+X$ candidate events\\}
     \begin{tabular}{c p{0.66\linewidth}}
@@ -474,7 +467,7 @@ In extracting $pp\to J/\psi+J/\psi+\Upsilon+X$ signals, selection criteria shown
 
 A three-dimensional maximum likelihood fit is used to extract the signal components. With relatively limited statistics, the signal peaks are modelled using one Gaussian function each, with center value fixed at PDG values \cite{PDG2020} and neglecting the $\Upsilon(2S,3S)$ signals. The background is further modelled by second-order polynomials. With all signal and background components, we define further eight yield parameters.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/JpsiJpsiY_fit.png}
     \caption{Fit result projection on individual invariant mass spectra}
@@ -483,7 +476,7 @@ A three-dimensional maximum likelihood fit is used to extract the signal compone
 
 The fit result projection is shown in Figure  \ref{fig:JpsiJpsiY_fit}, with no significant results.
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{}
     \begin{tabular}{cc}
@@ -582,7 +575,7 @@ The simulation generation methods for $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ event
 
 A series of event samples was generated using HELAC-Onia 2.7.6, with generator-level filter shown in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter}. 
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Generation-level Event Filter Criteria for \texorpdfstring{$pp\to J/\psi+J/\psi+\Upsilon+X$}{pp -> J/psi + J/psi + Upsilon + X}\\}
     \label{tab:JpsiJpsiY_MC_GEN_Filter}
@@ -620,21 +613,21 @@ These filtered event samples, stored in Les Houches Event (LHE) format, are used
 
 The correlation between the produced particles can be demonstrated through the $\Delta y - \Delta \phi$ and $\Delta |y| - \Delta \phi$ distribution of the generated particles. At LHE level, the distribution is presented in Figures \ref{fig:TPS_JJY1S_filtered_correlation_LHE}, \ref{fig:DPS01_JJY1S_filtered_correlation_LHE} and \ref{fig:DPS02_JJY1S_filtered_correlation_LHE}.
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/yabs_LHE_LEVEL_TPS_JJY1S_correlation_filtered_p2.png}
     \caption{Correlation between generated particles in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events at LHE level}
     \label{fig:TPS_JJY1S_filtered_correlation_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/yabs_LHE_LEVEL_DPS_JY1S_J_correlation_filtered_p2.png}
     \caption{Correlation between generated particles in DPS-01 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events at LHE level}
     \label{fig:DPS01_JJY1S_filtered_correlation_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/yabs_LHE_LEVEL_DPS_JJ_Y1S_correlation_filtered_p2.png}
     \caption{Correlation between generated particles in DPS-02 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events at LHE level}
@@ -643,63 +636,63 @@ The correlation between the produced particles can be demonstrated through the $
 
 The difference in the correlation between the generated particles in TPS and DPS processes is evident, especially in the $\Delta \phi$ projection. These plots demonstrate the feasibility of separating the components in the subsequent analysis. Such properties can also be seen on the one dimensional distribution of $\Delta y$, $\Delta \phi$ and $\Delta R$ in Figures .
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_TPS_DeltaY_filtered.png}
     \caption{Distribution of $\Delta y$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:TPS_JJY1S_filtered_DeltaY_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_TPS_DeltaPhi_filtered.png}
     \caption{Distribution of $\Delta \phi$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:TPS_JJY1S_filtered_DeltaPhi_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_TPS_DeltaR_filtered.png}
     \caption{Distribution of $\Delta R$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:TPS_JJY1S_filtered_DeltaR_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_J_JY1S_DeltaY_filtered.png}
     \caption{Distribution of $\Delta y$ in DPS-01 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:DPS01_JJY1S_filtered_DeltaY_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_J_JY1S_DeltaPhi_filtered.png}
     \caption{Distribution of $\Delta \phi$ in DPS-01 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:DPS01_JJY1S_filtered_DeltaPhi_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_J_JY1S_DeltaR_filtered.png}
     \caption{Distribution of $\Delta R$ in DPS-01 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:DPS01_JJY1S_filtered_DeltaR_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_JJ_Y1S_DeltaY_filtered.png}
     \caption{Distribution of $\Delta y$ in DPS-02 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:DPS02_JJY1S_filtered_DeltaY_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_JJ_Y1S_DeltaPhi_filtered.png}
     \caption{Distribution of $\Delta \phi$ in DPS-02 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
     \label{fig:DPS02_JJY1S_filtered_DeltaPhi_LHE}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/LHE_LEVEL_DPS_JJ_Y1S_DeltaR_filtered.png}
     \caption{Distribution of $\Delta R$ in DPS-02 $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_GEN_Filter} at LHE level}
@@ -714,28 +707,30 @@ To gain a more realistic prediction of particle correlation, a set of full-chain
 
 A sample of approximately $3.6\times 10^6$ TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events was generated using HELAC-Onia 2.7.6, without any generator-level filter. The events were then processed through the full chain of simulation and reconstruction described in Section \ref{sec:MC-FullChain}. After passing the full filter condition shown in Table \ref{tab:JpsiJpsiY_MC_Full_Filter}, a total of 441 events were obtained. Due to limited statistics, only individual $\Delta \phi$, $\Delta y$ and $\Delta R$ distributions are plotted. 
 
-\begin{table}[]
+\begin{table}[h!]
     \centering
     \caption{Full-chain Event Selection Criteria for $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$\\}
-    \begin{tabular}{cc}
+    \begin{tabular}{p{0.3\linewidth} p{0.65\linewidth}}
+        \toprule
         \textbf{Object} & \textbf{Criteria} \\
+        \midrule
         Generated $J/\psi $         & $\left|y\right|<3$ \\
         Generated $\Upsilon(1S)$    & $\left|y\right|<3$ \\
         \midrule
-        Reconstructed $\mu^\pm $ & Muon ID "soft" \\
+        \multirow[t]{4}{=}{Reconstructed $\mu^\pm $} & Muon ID "soft" \\
                 & $|\eta| < 2.4$ \\
                 & $p_T > 3.5\GeVc$ for $|\eta| < 1.2$ \\
                 & $p_T > 2.5\GeVc$ for $1.2 < |\eta| < 2.4$ \\
-        Reconstructed Charged Tracks & High Purity \\
+        \multirow[t]{3}{=}{Reconstructed Charged Tracks} & High Purity \\
                   & $|\eta|<2.5$ \\
                   & $p_T > 2.0 \GeVc$ \\
         \midrule
-        Reconstructed $J/\psi$ & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
+        \multirow[t]{4}{=}{Reconstructed $J/\psi$} & $2.9 \GeVcs < m_{\mu\mu} < 3.3 \GeVcs$ \\
                 & $p_T > 4.0\GeVc$ \\
                 & $|y| < 2.5$ \\
                 & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
         \midrule
-        Reconstructed $\Upsilon(1S)$ & $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$ \\
+        \multirow[t]{4}{=}{Reconstructed $\Upsilon(1S)$} & $8.5\GeVcs < m_{\mu\mu} < 11.4 \GeVcs$ \\
                 & $p_T > 4.0\GeVc$ \\
                 & $|y| < 2.5$ \\
                 & Opposite-sign muon pairs fitted to common vertex with $> 0.5\%$ probability \\
@@ -744,21 +739,21 @@ A sample of approximately $3.6\times 10^6$ TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)
     \label{tab:JpsiJpsiY_MC_Full_Filter}
 \end{table}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/Ntuple_LEVEL_TPS_DeltaPhi_filtered.png}
     \caption{Distribution of $\Delta \phi$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_Full_Filter} after complete simulation and reconstruction}
     \label{fig:TPS_JJY1S_filtered_DeltaPhi_Ntuple}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/Ntuple_LEVEL_TPS_DeltaY_filtered.png}
     \caption{Distribution of $\Delta y$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_Full_Filter} after complete simulation and reconstruction}
     \label{fig:TPS_JJY1S_filtered_DeltaY_Ntuple}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htbp]
     \centering
     \includegraphics[width=1.0\linewidth]{images/Ntuple_LEVEL_TPS_DeltaR_filtered.png}
     \caption{Distribution of $\Delta R$ in TPS $pp\to J/\psi+J/\psi+\Upsilon(1S)+X$ events passing filter condition in Table \ref{tab:JpsiJpsiY_MC_Full_Filter} after complete simulation and reconstruction}
@@ -791,6 +786,6 @@ This work is carried out under the supervision of Dr. Zhen Hu and in collaborati
 
 Much help has been received from the Tsinghua CMS group, including but not limited to the following members: Dr. Zhen Hu, Yiyang Zhao, Xining Wang, Shiyang Chen. The author would like to express his gratitude for their help and support.
 
-\bibliographystyle{abbrv}
+\bibliographystyle{unsrt}
 \bibliography{mainTemplatePDF.bib}
 \end{document}
