@@ -3,6 +3,7 @@ name: Build LaTeX Document
 on:
   push:
     branches: [ master ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ master ]
 
@@ -28,3 +29,43 @@ jobs:
       with:
         name: pdf-document
         path: mainTemplatePDF.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download PDF artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: pdf-document
+        path: ./artifacts
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          Automatic release for tag ${{ github.ref }}
+          
+          This release contains the compiled PDF document.
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./artifacts/mainTemplatePDF.pdf
+        asset_name: mainTemplatePDF-${{ github.ref_name }}.pdf
+        asset_content_type: application/pdf
