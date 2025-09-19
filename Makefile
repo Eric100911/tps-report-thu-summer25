@@ -9,6 +9,7 @@ $(TEXFILE).bib: $(TEXFILE).tex $(BIBFILE).bib
 	python3 generate_bib.py --bib $(BIBFILE).bib --output $(TEXFILE).bib --tex $(TEXFILE).tex
 
 $(TEXFILE).pdf: $(TEXFILE).tex $(TEXFILE).bib
+	rm -f $(TEXFILE).aux $(TEXFILE).out $(TEXFILE).log $(TEXFILE).toc $(TEXFILE).bbl $(TEXFILE).blg $(TEXFILE).fls $(TEXFILE).fdb_latexmk
 	pdflatex $(TEXFILE).tex
 	bibtex $(TEXFILE)
 	pdflatex $(TEXFILE).tex
